@@ -1,4 +1,5 @@
-import Tablero from './tablero'
+import Tablero from "./Tablero"
+
 function App() {
 
   return (
