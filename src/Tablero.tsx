@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 function Tablero() {
-  const [tabla, setTabla] = useState(["", "", "", "", "", "", "", "", ""]);
-  const [turno, setTurno] = useState("X");
-  const [ganador, setGanador] = useState(null);
+  const [tabla, setTabla] = useState<string[]>(["", "", "", "", "", "", "", "", ""]);
+  const [turno, setTurno] = useState<"X"|"O">("X");
+  const [ganador, setGanador] = useState<"X" | "O" | null>(null);
   const [X, setX] = useState(0);
   const [O, setO] = useState(0);
 
@@ -47,7 +47,7 @@ function Tablero() {
     return `Turno de ${turno}`;
   }
 
-  function actulizarTablero(index) {
+  function actulizarTablero(index:number) {
     if (tabla[index] !== "" || ganador !== null) return;
     const newTabla = [...tabla];
     newTabla[index] = turno;
