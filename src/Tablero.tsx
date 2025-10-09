@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-
 function Tablero() {
-  const [tabla, setTabla] = useState<string[]>(["", "", "", "", "", "", "", "", ""]);
-  const [turno, setTurno] = useState<"X"|"O">("X");
+  const [tabla, setTabla] = useState<string[]>([
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ]);
+  const [turno, setTurno] = useState<"X" | "O">("X");
   const [ganador, setGanador] = useState<"X" | "O" | null>(null);
   const [X, setX] = useState(0);
   const [O, setO] = useState(0);
@@ -47,7 +56,7 @@ function Tablero() {
     return `Turno de ${turno}`;
   }
 
-  function actulizarTablero(index:number) {
+  function actulizarTablero(index: number) {
     if (tabla[index] !== "" || ganador !== null) return;
     const newTabla = [...tabla];
     newTabla[index] = turno;
@@ -78,14 +87,14 @@ function Tablero() {
         <h2 className="contadorO">
           jugador{<br />} O={O}
         </h2>
+        <p
+          className={`mensajeGanador ${
+            ganador || tabla.every((casilla) => casilla !== "") ? "centrar" : ""
+          }`}
+        >
+          {mensajeGanador()}
+        </p>
       </div>
-      <p
-        className={`mensajeGanador ${
-          ganador || tabla.every((casilla) => casilla !== "") ? "centrar" : ""
-        }`}
-      >
-        {mensajeGanador()}
-      </p>
 
       <div>
         <div
@@ -111,7 +120,7 @@ function Tablero() {
             </button>
           ))}
         </div>
-        <button className="reiniciar" onClick={Reiniciar}>
+        <button className="reiniciar pt-20" onClick={Reiniciar}>
           Reiniciar
         </button>
       </div>
