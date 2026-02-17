@@ -1,8 +1,36 @@
-# React + Vite
+# 🎮 Ta-Te-Ti (Tres en Línea)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación frontend desarrollada con React + TypeScript y estilos en CSS puro para jugar al clásico Ta-Te-Ti entre dos jugadores. Ideal para practicar lógica de juego, manejo de estado y diseño visual sin frameworks de estilos.
 
-Currently, two official plugins are available:
+## 🧩 Descripción general
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esta app permite:
+
+- ❌⭕ Jugar Ta-Te-Ti entre dos jugadores en el mismo dispositivo  
+- 🔄 Reiniciar la partida en cualquier momento  
+- 🧠 Practicar lógica de turnos, condiciones de victoria y empate  
+- 🎨 Diseñar una interfaz clara y responsiva con CSS puro  
+
+## ⚙️ Tecnologías utilizadas
+
+### Frontend
+
+- ⚛️ React + TypeScript  
+- ⚡ Vite como entorno de desarrollo  
+- 🎨 CSS tradicional para estilos personalizados  
+- 🧠 Estado con `useState` y lógica de juego  
+- 📦 Componentes organizados por tablero, celda y controles  
+
+
+## 🚀 Instalación y ejecución
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/abelastra/tateti
+
+# Instalar dependencias
+cd tateti
+npm install
+
+# Ejecutar servidor de desarrollo
+npm run dev
